@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "usuarios")
 public class Usuario {
 	
 	@Id
@@ -43,6 +43,9 @@ public class Usuario {
 	
 	@Size(min = 5, max =255)
 	private String fotoPerfil;
+	
+	@Size(min = 5, max = 20)
+	private String admin;
 	
 	private int nivel;
 
@@ -78,13 +81,6 @@ public class Usuario {
 		this.confirmacaoSenha = confirmacaoSenha;
 	}
 
-	public String getBios() {
-		return biografia;
-	}
-
-	public void setBios(String bios) {
-		this.biografia = bios;
-	}
 
 	public String getTelefone() {
 		return telefone;
@@ -125,7 +121,22 @@ public class Usuario {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+	public String getBiografia() {
+		return biografia;
+	}
+
+	public void setBiografia(String biografia) {
+		this.biografia = biografia;
+	}
+
+	public String getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(String admin) {
+		this.admin = admin;
+	}
 	
 
 }
