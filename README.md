@@ -3,7 +3,7 @@
 ![WhatsApp Image 2021-07-27 at 15 54 06](https://photos.app.goo.gl/zv7YAsmCXf2pDMUY6)
 
 # DESENVOLVIDO
-Projeto Desenvolvido para a conclusão do BOOTCAMP da GENERATION
+Projeto Desenvolvido para a conclusão do BOOTCAMP da GENERATION BRASIL
 
 # DESENVOLVEDORES
 [![Github Badge](https://img.shields.io/badge/-Camila-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/camila-santos-ferreira)](https://github.com/camila-santos-ferreira)
