@@ -19,7 +19,7 @@ import br.com.recodecycle.model.Postagem;
 import br.com.recodecycle.repository.PostagemRepository;
 
 @RestController
-@RequestMapping("/postagem")
+@RequestMapping("/postagens")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
 
