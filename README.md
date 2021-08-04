@@ -1,6 +1,7 @@
 # RecodeCycle
 
-![WhatsApp Image 2021-07-27 at 15 54 06](https://photos.app.goo.gl/zv7YAsmCXf2pDMUY6)
+![WhatsApp Image 2021-08-04 at 12 18 44](https://user-images.githubusercontent.com/85905579/128208755-086d21d1-bb14-400e-9644-d0cd8385b169.jpeg)
+
 
 # DESENVOLVIDO
 Projeto Desenvolvido para a conclusão do BOOTCAMP da GENERATION BRASIL
