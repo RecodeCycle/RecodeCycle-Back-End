@@ -8,12 +8,7 @@ import br.com.recodecycle.model.Postagem;
 
 public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 
-	public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo); 
 	
-	public List<Postagem> findAllByRegioesContainingIgnoreCase (String regioes); 
-	
-	public List<Postagem> findAllByResiduosContainingIgnoreCase (String residuos); 
-	
-	public List<Postagem> findAllByInformativosContainingIgnoreCase (String informativos); 
-
+	public List<Postagem> findByRegioesOrResiduos (String regioes, String residuos); 
+	 
 }

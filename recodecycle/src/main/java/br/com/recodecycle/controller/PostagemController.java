@@ -38,24 +38,10 @@ public class PostagemController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/{titulo}")
-	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo) {
-		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
-	}
 	
-	@GetMapping("/{regioes}")
-	public ResponseEntity<List<Postagem>> getByRegioes(@PathVariable String regioes) {
-		return ResponseEntity.ok(postagemRepository.findAllByRegioesContainingIgnoreCase(regioes));
-	}
-	
-	@GetMapping("/{residuos}")
-	public ResponseEntity<List<Postagem>> getByResiduos(@PathVariable String residuos) {
-		return ResponseEntity.ok(postagemRepository.findAllByResiduosContainingIgnoreCase(residuos));
-	}
-	
-	@GetMapping("/{informativos}")
-	public ResponseEntity<List<Postagem>> getByInformativos(@PathVariable String informativos) {
-		return ResponseEntity.ok(postagemRepository.findAllByInformativosContainingIgnoreCase(informativos));
+	@GetMapping("/regioes/{regioes}/residuos/{residuos}")
+	public ResponseEntity<List<Postagem>> GetByRegioesOrResiduos(@PathVariable String regioes, @PathVariable String residuos) {
+		return ResponseEntity.ok(postagemRepository.findByRegioesOrResiduos(regioes, residuos));
 	}
 	
 	@PostMapping
