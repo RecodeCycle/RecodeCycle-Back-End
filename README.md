@@ -1,9 +1,10 @@
 # RecodeCycle
 
-![WhatsApp Image 2021-07-27 at 15 54 06](https://user-images.githubusercontent.com/85905579/127384690-c23b7548-6ace-4c67-b15c-162e3975dd5e.jpeg)
+![WhatsApp Image 2021-08-04 at 12 18 44](https://user-images.githubusercontent.com/85905579/128208755-086d21d1-bb14-400e-9644-d0cd8385b169.jpeg)
+
 
 # DESENVOLVIDO
-Projeto Desenvolvido para a conclusão do BOOTCAMP da GENERATION
+Projeto Desenvolvido para a conclusão do BOOTCAMP da GENERATION BRASIL
 
 # DESENVOLVEDORES
 [![Github Badge](https://img.shields.io/badge/-Camila-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/camila-santos-ferreira)](https://github.com/camila-santos-ferreira)
