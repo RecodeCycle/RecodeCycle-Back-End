@@ -42,7 +42,7 @@ public class Postagem {
 	@Size(min = 5, max = 255)
 	private String residuos;
 	
-	@NotNull
+	
 	@Size(min = 5, max = 500)
 	private String informativos;
 	
@@ -54,6 +54,14 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Usuario usuario;
 
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 
 	public long getId() {
 		return id;

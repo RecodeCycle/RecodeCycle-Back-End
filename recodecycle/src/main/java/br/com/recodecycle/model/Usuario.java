@@ -23,20 +23,16 @@ public class Usuario {
 	private long id;
 	
 	@NotNull
-	@Size(min = 5, max =100, message = "Campo Obrigatório")
+	@Size(min = 5, max =100, message = "Nome Obrigatório")
 	private String nome;
 	
 	@NotNull
-	@Size(min = 5, max =50, message = "Campo Obrigatório")
+	@Size(min = 5, max =50, message = "Email Obrigatório")
 	private String email;
 	
 	@NotNull
-	@Size(min = 5, message = "Campo Obrigatório")
+	@Size(min = 5, message = "Senha Obrigatório")
 	private String senha;
-	
-	@NotNull
-	@Size(min = 5, message = "Campo Obrigatório")
-	private String confirmacaoSenha;
 	
 	@Size(min = 5, max =500)
 	private String biografia;
@@ -58,6 +54,15 @@ public class Usuario {
 	@OneToMany(mappedBy="usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
+
+	
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
 
 	public long getId() {
 		return id;
@@ -82,15 +87,6 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
-	public String getConfirmacaoSenha() {
-		return confirmacaoSenha;
-	}
-
-	public void setConfirmacaoSenha(String confirmacaoSenha) {
-		this.confirmacaoSenha = confirmacaoSenha;
-	}
-
 
 	public String getTelefone() {
 		return telefone;
