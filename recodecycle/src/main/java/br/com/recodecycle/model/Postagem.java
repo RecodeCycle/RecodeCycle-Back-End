@@ -46,9 +46,14 @@ public class Postagem {
 	@Size(min = 5, max = 500)
 	private String informativos;
 	
-	@ManyToOne
+	@ManyToOne()
 	@JsonIgnoreProperties("postagem")
 	private Categoria categoria;
+	
+	@ManyToOne	
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
+
 
 	public long getId() {
 		return id;
