@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.recodecycle.model.Postagem;
 import br.com.recodecycle.repository.PostagemRepository;
+import br.com.recodecycle.service.PostagemService;
 
 @RestController
 @RequestMapping("/postagens")
@@ -25,6 +26,9 @@ public class PostagemController {
 
 	@Autowired
 	private PostagemRepository postagemRepository;
+	
+	@Autowired
+	private PostagemService postagemService;
 	
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAll() {
@@ -57,6 +61,20 @@ public class PostagemController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id) {
 		postagemRepository.deleteById(id);
+	}
+	
+	@PutMapping("/curtir/{id}")
+	public ResponseEntity<Postagem> putCurtirPostagemId (@PathVariable Long id){
+		
+		return ResponseEntity.status(HttpStatus.OK).body(postagemService.curtir(id));
+	
+	}
+
+	@PutMapping("/descurtir/{id}")
+	public ResponseEntity<Postagem> putDescurtirPostagemId (@PathVariable Long id){
+		
+		return ResponseEntity.status(HttpStatus.OK).body(postagemService.descurtir(id));
+	
 	}
 	
 	
