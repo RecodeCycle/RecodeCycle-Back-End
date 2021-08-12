@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.recodecycle.model.Categoria;
 import br.com.recodecycle.repository.CategoriaRepository;
+import br.com.recodecycle.service.CategoriaService;
 
 @RestController
 @RequestMapping("/categorias")
@@ -25,6 +26,9 @@ public class CategoriaController {
 	
 	@Autowired
 	private CategoriaRepository categoriaRepository;
+	
+	@Autowired
+	private CategoriaService categoriaService;
 	
 	@GetMapping
 	private ResponseEntity<List<Categoria>> getAll() {
@@ -59,4 +63,11 @@ public class CategoriaController {
 		categoriaRepository.deleteById(id);
 	}
 
+	@GetMapping("/trendtopics")
+	public ResponseEntity<List<Categoria>> getTrendTopics() {
+		
+		return ResponseEntity.ok(categoriaService.trendTopics());
+	
+	}
+	
 }
