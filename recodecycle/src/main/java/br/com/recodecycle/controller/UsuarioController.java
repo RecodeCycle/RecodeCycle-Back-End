@@ -51,19 +51,19 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/cadastrar")
-	public ResponseEntity<Optional<Usuario>> postUsuario(@RequestBody Usuario email) {
-		Optional<Usuario> novoUsuario = usuarioService.cadastrarUsuario(email);
+	public ResponseEntity<Usuario> postUsuario(@RequestBody Usuario email) {
+		Usuario novoUsuario = usuarioService.cadastrarUsuario(email);
 		try {
 			return ResponseEntity.status(HttpStatus.CREATED).body(novoUsuario);
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().build();
 		}
-
+		
 	}
 
 	@PutMapping("/alterar")
-	public ResponseEntity<Usuario> putUsuario(@RequestBody Usuario usuario) {
-		Optional<Usuario> updateUsuario = usuarioService.atualizarUsuario(usuario);
+	public ResponseEntity<Usuario> putUsuario(@RequestBody Usuario email) {
+		Optional<Usuario> updateUsuario = usuarioService.atualizarUsuario(email);
 		try {
 			return ResponseEntity.ok(updateUsuario.get());
 		} catch (Exception e) {
@@ -72,7 +72,7 @@ public class UsuarioController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteTema(@PathVariable long id) {
+	public void deleteUsuario(@PathVariable long id) {
 
 		Optional<Usuario> usuario = usuarioRepository.findById(id);
 		
