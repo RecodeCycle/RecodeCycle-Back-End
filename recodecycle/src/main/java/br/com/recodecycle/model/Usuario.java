@@ -67,14 +67,6 @@ public class Usuario {
 	}
 
 	
-	public List<Postagem> getPostagem() {
-		return postagem;
-	}
-
-	public void setPostagem(List<Postagem> postagem) {
-		this.postagem = postagem;
-	}
-
 	public long getId() {
 		return id;
 	}
@@ -91,12 +83,28 @@ public class Usuario {
 		this.nome = nome;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getSenha() {
 		return senha;
 	}
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getBiografia() {
+		return biografia;
+	}
+
+	public void setBiografia(String biografia) {
+		this.biografia = biografia;
 	}
 
 	public String getTelefone() {
@@ -123,6 +131,14 @@ public class Usuario {
 		this.fotoPerfil = fotoPerfil;
 	}
 
+	public String getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(String admin) {
+		this.admin = admin;
+	}
+
 	public int getNivel() {
 		return nivel;
 	}
@@ -131,29 +147,12 @@ public class Usuario {
 		this.nivel = nivel;
 	}
 
-	public String getEmail() {
-		return email;
+	public List<Postagem> getPostagem() {
+		return postagem;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getBiografia() {
-		return biografia;
-	}
-
-	public void setBiografia(String biografia) {
-		this.biografia = biografia;
-	}
-
-	public String getAdmin() {
-		return admin;
-	}
-
-	public void setAdmin(String admin) {
-		this.admin = admin;
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
 	}
 	
-
 }

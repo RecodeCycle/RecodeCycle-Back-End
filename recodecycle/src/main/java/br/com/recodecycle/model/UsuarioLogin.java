@@ -82,6 +82,6 @@ public class UsuarioLogin {
 		this.nivel = nivel;
 	}
 	
-	
-	
 }
+	
+	
