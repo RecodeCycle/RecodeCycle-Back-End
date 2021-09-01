@@ -11,6 +11,12 @@ public class UsuarioLogin {
 	private String senha;
 	
 	private String token;
+	
+	private String fotoPerfil;
+	
+	private String admin;
+	
+	private int nivel;
 
 	public long getId() {
 		return id;
@@ -51,5 +57,31 @@ public class UsuarioLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
+
+	public String getFotoPerfil() {
+		return fotoPerfil;
+	}
+
+	public void setFotoPerfil(String fotoPerfil) {
+		this.fotoPerfil = fotoPerfil;
+	}
+
+	public String getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(String admin) {
+		this.admin = admin;
+	}
+
+	public int getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
+	
+	
 	
 }

@@ -1,5 +1,6 @@
 package br.com.recodecycle.model;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -56,6 +57,14 @@ public class Usuario {
 	@OneToMany(mappedBy="usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
+	
+	public Usuario(long id, String nome, String usuario, String senha, LocalDate dataNascimento) {
+		this.id = id;
+		this.nome = nome;
+		this.email = usuario;
+		this.senha = senha;
+		
+	}
 
 	
 	public List<Postagem> getPostagem() {
