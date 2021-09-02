@@ -49,7 +49,6 @@ public class Usuario {
 	@Size(min = 5, max =255)
 	private String fotoPerfil;
 	
-	@Size(min = 5, max = 20)
 	private String admin;
 	
 	private int nivel;
@@ -58,11 +57,6 @@ public class Usuario {
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
 	
-	public Usuario(long id, String nome, String usuario, String senha, LocalDate dataNascimento) {
-		this.id = id;
-		this.nome = nome;
-		this.email = usuario;
-		this.senha = senha;
 		
 	}
 
