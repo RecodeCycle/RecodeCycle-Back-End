@@ -48,6 +48,11 @@ public class PostagemController {
 		return ResponseEntity.ok(postagemRepository.findByRegioesOrResiduos(regioes, residuos));
 	}
 	
+	@GetMapping("/titulo/{titulo}")
+	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo){
+		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
+	}
+	
 	@PostMapping
 	public ResponseEntity<Postagem> post(@RequestBody Postagem postagem) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(postagemRepository.save(postagem));

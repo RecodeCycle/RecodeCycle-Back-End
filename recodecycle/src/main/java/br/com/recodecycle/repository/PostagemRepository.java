@@ -16,6 +16,8 @@ public interface PostagemRepository extends JpaRepository<Postagem, Long> {
 	
 	public List<Postagem> findByRegioesOrResiduos (String regioes, String residuos); 
 	 
+	public List<Postagem> findAllByTituloContainingIgnoreCase(String titulo);
+	
 	@Query(value = "select count(tema_id) from postagens where tema_id = :id", nativeQuery = true)
 	public int countPosts(@Param("id") long id);
 	
